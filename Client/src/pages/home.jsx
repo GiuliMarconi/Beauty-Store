@@ -1,7 +1,5 @@
 import React from 'react'
-import Header from '../components/header'
-import Main from '../components/main'
-import ListProducts from '../components/products'
+import Header from '../components/header.jsx'
 
 
 export function Home(){
@@ -9,7 +7,6 @@ export function Home(){
     <div>
         <Header/>
         <div>
-            <Main/>
         </div>
 
     </div>
