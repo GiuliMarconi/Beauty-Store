@@ -5,6 +5,9 @@ import {
     CreateProductRequest,
     ShowProductRequest,
     UpdateProductRequest } from '../api/products.api'
+import {
+    LoginRequest,
+    RegisterRequest } from '../api/user.api'
 import { AppContext } from "./AppContext";
 
 
@@ -23,12 +26,13 @@ export const AppContextProvider = ({children}) => {
 
     const [products, setProducts] = useState([])
 
+    //PRODUCTOS----------------------------
+
     //mostrar productos
     async function loadProducts() {
         const response = await GetProductRequest()
         setProducts(response.data)
     }
-
     //eliminar producto
     const deleteProduct = async (product_id) => {
         try {
@@ -38,7 +42,6 @@ export const AppContextProvider = ({children}) => {
           console.error(error);
         }  
     };
-
     //crear un producto
     const createProduct = async (product) => {
         try {
@@ -47,9 +50,7 @@ export const AppContextProvider = ({children}) => {
             console.error(error) 
         }
     }
-
     //mostrar un producto
-
     const showProduct = async (product_id) => {
         try {
           const response = await ShowProductRequest(product_id);  
@@ -58,9 +59,7 @@ export const AppContextProvider = ({children}) => {
             console.error(error)
         }
     }
-
     //actualizar un producto
-
     const updateProduct = async (product_id, newFields) => {
         try {
             const response = await UpdateProductRequest(product_id, newFields);
@@ -70,8 +69,35 @@ export const AppContextProvider = ({children}) => {
         }
     }
 
+    //Login------------------------------
+    const loginUser = async (user) => {
+        try {
+            await LoginRequest(user)
+        } catch (error) {
+            console.error(error) 
+        }
+    }
+
+    const registerUser = async (user) => {
+        try {
+            await RegisterRequest(user)
+        } catch (error) {
+            console.error(error) 
+        }
+    }
+
+
     return (
-    <AppContext.Provider value={{products, loadProducts, deleteProduct, createProduct, showProduct, updateProduct}}>
+    <AppContext.Provider value={
+        {products, 
+        loadProducts, 
+        deleteProduct, 
+        createProduct, 
+        showProduct, 
+        updateProduct,
+        loginUser,
+        registerUser,
+        }}>
         {children}
     </AppContext.Provider>
     )

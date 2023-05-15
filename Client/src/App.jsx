@@ -1,5 +1,6 @@
 import './App.css'
 import {List} from './pages/list'
+import {Login} from './pages/login'
 import {Home} from './pages/home'
 import {HomeAdmin} from './pages/homeAdmin'
 import {Route, Routes} from 'react-router-dom'
@@ -14,6 +15,7 @@ function App() {
         <Route path='/Admin' element={<HomeAdmin/>}></Route>
         <Route path='/list' element={<List/>}></Route>
         <Route path='/edit/:id' element={<List/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
         <Route path='*' element={<NotFoundPage/>}></Route>
       </Routes>
     </AppContextProvider>

@@ -218,7 +218,7 @@ export default function Header() {
               <div className="mb-4">
               <a href="/">
                 <span className="sr-only w-8">Beauty Store</span>
-                <img src="/src/assets/others/logo.png" className="w-40" />
+                <img src="/src/assets/logo.png" className="w-40" />
               </a>
             
               </div>
@@ -325,7 +325,7 @@ export default function Header() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a href= '#' className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <a href= '/login' className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Iniciar Sesión
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />

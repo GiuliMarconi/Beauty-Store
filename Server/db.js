@@ -7,3 +7,5 @@ export const pool = createPool({
     password: '',
     database: 'ecommerce',
 })
+
+export default pool

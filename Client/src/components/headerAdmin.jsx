@@ -219,7 +219,7 @@ export default function HeaderAdmin() {
               <div className="mb-4">
               <a href="/Admin">
                 <span className="sr-only w-8">Beauty Store</span>
-                <img src="/src/assets/others/logo.png" className="w-40" />
+                <img src="/src/assets/logo.png" className="w-40" />
               </a>
             
               </div>
@@ -330,7 +330,7 @@ export default function HeaderAdmin() {
                     Crear producto
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href= '#' className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <a href= '/' className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Cerrar Sesión
                   </a>
                 </div>
