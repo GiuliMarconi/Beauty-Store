@@ -6,6 +6,7 @@ import {HomeAdmin} from './pages/homeAdmin'
 import {Route, Routes} from 'react-router-dom'
 import { NotFoundPage } from './pages/notFoundPage'
 import {AppContextProvider} from './context/AppProvider'
+import { FlipCart } from './components/cart'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/list' element={<List/>}></Route>
         <Route path='/edit/:id' element={<List/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/cart' element={<FlipCart/>}></Route>
         <Route path='*' element={<NotFoundPage/>}></Route>
       </Routes>
     </AppContextProvider>
